@@ -1,0 +1,19 @@
+<div *ngIf="product" class="thumbnail">
+    <h3>{{product.name}}</h3>
+    <table>
+      <tr>
+        <td>
+          <img class="rounded" src="app/300.png" alt="..."> <br>
+        </td>
+        <td><p class="caption">{{product.shortDescription}}</p></td>
+      </tr>
+    </table>
+    <p>{{product.description}}</p>
+      <table align="right">
+        <tr>
+          <td>Price:</td>
+          <td><h2>{{product.price}}</h2></td>
+          <td align="right"><basket-btn [product]="product"></basket-btn></td>
+        </tr>
+      </table>
+</div>

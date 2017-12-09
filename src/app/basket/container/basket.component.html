@@ -1,0 +1,15 @@
+<div class="thumbnail">
+  <table class="table table-bordered">
+    <tr *ngFor="let product of p">
+      <td>
+        <span>{{product.name}}</span>
+      </td>
+      <td>
+        <button (click)="deleteProduct(product)">delete</button>
+      </td>
+    </tr>
+  </table>
+  <button (click)="save()">save</button>
+  <span>Total price:{{service.total}}</span>
+</div>
+

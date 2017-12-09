@@ -1,0 +1,13 @@
+<div>
+  <header-component></header-component>
+</div>
+<div class="row">
+  <div class="col-md-2">
+    <app-categories></app-categories>
+    <app-basket *ngIf="service.total"></app-basket>
+  </div>
+
+  <div class="col-md-10">
+    <router-outlet></router-outlet>
+  </div>
+</div>
