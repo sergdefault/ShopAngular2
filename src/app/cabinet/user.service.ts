@@ -11,7 +11,7 @@ import {User} from "./User";
 
 @Injectable()
 export class UserService {
-  private baseUrl: string = 'http://192.168.0.57:8080/cabinet';
+  private baseUrl: string = 'http://localhost:8080/cabinet';
 
   constructor(private http: Http,  private authenticationService: AuthenticationService) {
   }

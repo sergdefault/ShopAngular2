@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Created by SerhiiTsymbaliuk on 7/15/17.
  */
@@ -17,7 +18,7 @@ require("rxjs/add/operator/map");
 var CategoriesService = (function () {
     function CategoriesService(http) {
         this.http = http;
-        this.baseUrl = 'http://192.168.0.57:8080';
+        this.baseUrl = 'http://localhost:8080';
     }
     CategoriesService.prototype.getAll = function () {
         var categories$ = this.http

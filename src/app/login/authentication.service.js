@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Created by SerhiiTsymbaliuk on 12/5/17.
  */
@@ -20,7 +21,7 @@ require("rxjs/add/observable/throw");
 var AuthenticationService = (function () {
     function AuthenticationService(http) {
         this.http = http;
-        this.authUrl = 'http://192.168.0.57:8080/auth';
+        this.authUrl = 'http://localhost:8080/auth';
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
     }
     AuthenticationService.prototype.login = function (username, password) {

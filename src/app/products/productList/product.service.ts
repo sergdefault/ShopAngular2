@@ -10,7 +10,7 @@ import {AuthenticationService} from "../../login/authentication.service";
 
 @Injectable()
 export class ProductService {
-  private baseUrl: string = 'http://192.168.0.57:8080';
+  private baseUrl: string = 'http://localhost:8080';
 
   constructor(private http: Http) {
   }

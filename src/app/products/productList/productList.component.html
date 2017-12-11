@@ -1,7 +1,6 @@
       <div class="col-sm-6 col-md-4" *ngFor="let product of products">
         <div class="thumbnail">
           <h3 style="text-align: center">{{product.name}}</h3>
-          <img class="media-object" src="app/300.png" alt="...">
           <p class="caption">{{product.shortDescription}}</p>
           <div> <a [routerLink]="['/product', product.product_id]">detail info</a></div>
           <table width="100%">
