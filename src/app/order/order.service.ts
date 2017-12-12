@@ -12,7 +12,7 @@ import {Order} from "./order";
 
 @Injectable()
 export class OrderService {
-  private baseUrl: string = 'http://localhost:8080/orders';
+  private baseUrl: string = 'http://212.68.160.118:8080/orders';
 
   constructor(private http: Http,  private authenticationService: AuthenticationService) {
   }

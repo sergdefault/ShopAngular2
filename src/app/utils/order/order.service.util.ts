@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {IProduct} from '../products/product';
+import {IProduct} from '../../products/product';
 
 @Injectable()
 export class OrderServiceUtil {

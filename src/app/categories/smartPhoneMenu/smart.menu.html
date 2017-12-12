@@ -1,0 +1,15 @@
+<style>
+  .center{
+    text-align: center;
+    font-size: 45px;
+  }
+</style>
+<br><br><br><br><br>
+<h1><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Close</a></h1>
+
+<div *ngFor="let category of categories">
+  <div class="list-group center">
+    <a style="color: black" [routerLink]="['/category', category.id]">{{category.name}}</a>
+  </div>
+</div>
+

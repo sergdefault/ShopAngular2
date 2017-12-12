@@ -4,7 +4,7 @@
   "description": "QuickStart package.json from the documentation, supplemented with testing support",
   "scripts": {
     "lite": "lite-server",
-    "start": "webpack-dev-server --inline --progress --port 3026",
+    "start": "webpack-dev-server --inline --progress --port 3038",
     "test": "karma start",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
   },

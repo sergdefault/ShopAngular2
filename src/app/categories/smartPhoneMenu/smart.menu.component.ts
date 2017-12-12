@@ -9,13 +9,13 @@ import {Router} from '@angular/router';
 
 
 @Component({
-  selector: 'app-categories',
+  selector: 'smart-menu',
   providers:[CategoriesService],
-  templateUrl: './category.menu.html',
-  styles: []
+  templateUrl: './smart.menu.html',
+  styles: ['./smart-menu.css']
 })
 
-export class CategoryListComponent {
+export class SmartMenuComponent{
   categories: ICategoryBase[];
   constructor(private router: Router, private categoriesService: CategoriesService) {
     this.categoriesService.getAll().subscribe(p => this.categories = p);

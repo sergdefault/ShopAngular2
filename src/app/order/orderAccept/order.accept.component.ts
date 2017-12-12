@@ -3,7 +3,7 @@
  */
 import {Component} from "@angular/core";
 import {IProduct} from "../../products/product";
-import {OrderServiceUtil} from "../../utils/order.service.util";
+import {OrderServiceUtil} from "../../utils/order/order.service.util";
 
 
 @Component({

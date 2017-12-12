@@ -1,5 +1,5 @@
 import {IProduct} from '../product';
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {CategoriesService} from '../../categories/categories.sercice';
 
@@ -9,23 +9,17 @@ import {CategoriesService} from '../../categories/categories.sercice';
   templateUrl: './productList.component.html',
 })
 
-export class ProductListComponent implements OnInit, OnDestroy {
+export class ProductListComponent{
   products: IProduct[];
   private sub: any;
+  private isSpinnerActive:boolean;
 
   constructor(private route: ActivatedRoute, private  categoriesService: CategoriesService) {
-    console.log('const');
     this.sub = this.route.params.subscribe(params => {
       let id = Number.parseInt(params['id']);
       this.categoriesService.getById(id).subscribe(p => this.products = p.products);
     });
   }
 
-  ngOnInit() {
 
-  }
-
-  ngOnDestroy() {
-    this.sub.unsubscribe();
-  }
 }

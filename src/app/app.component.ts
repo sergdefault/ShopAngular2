@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {OrderServiceUtil} from "./utils/order.service.util";
+import {Component} from '@angular/core';
+import {OrderServiceUtil} from "./utils/order/order.service.util";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'my-app',
@@ -8,5 +9,7 @@ import {OrderServiceUtil} from "./utils/order.service.util";
 })
 export class AppComponent{
 
-    constructor(public service: OrderServiceUtil) {}
+    constructor(public service: OrderServiceUtil,private router: Router) {
+    }
+
 }

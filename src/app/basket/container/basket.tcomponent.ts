@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {IProduct} from '../../products/product';
 import {ProductService} from '../../products/productList/product.service';
-import {OrderServiceUtil} from "../../utils/order.service.util";
+import {OrderServiceUtil} from "../../utils/order/order.service.util";
 
 @Component({
   selector: 'app-basket',

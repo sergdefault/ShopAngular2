@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {RouterModule, Routes} from '@angular/router';
@@ -9,9 +9,8 @@ import {ProductDetailComponent} from './products/productDetail/product.detail.co
 import {AppComponent} from './app.component';
 import {CategoryListComponent} from './categories/menu/categories.component';
 import {BasketBtn} from './basket/btn/basket.btn.component';
-import {CategoriesService} from './categories/categories.sercice';
 import {BasketComponent} from './basket/container/basket.tcomponent';
-import {OrderServiceUtil} from './utils/order.service.util';
+import {OrderServiceUtil} from './utils/order/order.service.util';
 import {LoginComponent} from "./login/login.component";
 import {HeaderComponent} from "./header/header.component";
 import {AuthenticationService} from "./login/authentication.service";
@@ -22,6 +21,7 @@ import {OrderService} from "./order/order.service";
 import {OrderListComponent} from "./order/orderList/order.list.component";
 import {OrderAcceptComponent} from "./order/orderAccept/order.accept.component";
 import {CreateNewUserComponent} from "./login/newuser/new.user.component";
+import {SmartMenuComponent} from "./categories/smartPhoneMenu/smart.menu.component";
 
 
 const appRoutes: Routes = [
@@ -45,7 +45,8 @@ const appRoutes: Routes = [
     UserCabinetComponent,
     OrderListComponent,
     OrderAcceptComponent,
-    CreateNewUserComponent
+    CreateNewUserComponent,
+    SmartMenuComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -69,4 +70,6 @@ const appRoutes: Routes = [
     OrderService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}

@@ -1,6 +1,6 @@
-      <div class="sidebar-offcanvas"  id="sidebar" *ngFor="let category of categories">
+<div  class="sidebar-offcanvas" *ngFor="let category of categories">
         <div class="list-group">
           <a [routerLink]="['/category', category.id]">{{category.name}}</a>
         </div>
-      </div>
+</div>
 

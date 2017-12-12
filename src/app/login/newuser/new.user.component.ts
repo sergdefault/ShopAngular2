@@ -3,7 +3,7 @@
  */
 import {Component, Input, OnInit} from "@angular/core";
 import {IProduct} from "../../products/product";
-import {OrderServiceUtil} from "../../utils/order.service.util";
+import {OrderServiceUtil} from "../../utils/order/order.service.util";
 import {UserService} from "../../cabinet/user.service";
 import {User} from "../../cabinet/User";
 import {FormBuilder, Validators} from "@angular/forms";
