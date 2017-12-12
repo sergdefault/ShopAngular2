@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {RouterModule, Routes} from '@angular/router';
 import { ProductService } from './products/productList/product.service';
@@ -20,6 +20,8 @@ import {CanActivateAuthGuard} from "./login/can-activate.authguard";
 import {UserService} from "./cabinet/user.service";
 import {OrderService} from "./order/order.service";
 import {OrderListComponent} from "./order/orderList/order.list.component";
+import {OrderAcceptComponent} from "./order/orderAccept/order.accept.component";
+import {CreateNewUserComponent} from "./login/newuser/new.user.component";
 
 
 const appRoutes: Routes = [
@@ -27,6 +29,7 @@ const appRoutes: Routes = [
   { path: 'product/:id',      component: ProductDetailComponent },
   { path: 'login',      component: LoginComponent },
   { path: 'cabinet',      component: UserCabinetComponent, canActivate: [CanActivateAuthGuard]},
+  { path: 'order',      component: OrderAcceptComponent}
 ];
 
 @NgModule({
@@ -40,7 +43,9 @@ const appRoutes: Routes = [
     LoginComponent,
     HeaderComponent,
     UserCabinetComponent,
-    OrderListComponent
+    OrderListComponent,
+    OrderAcceptComponent,
+    CreateNewUserComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -50,6 +55,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    ReactiveFormsModule
   ],
   exports: [
     RouterModule

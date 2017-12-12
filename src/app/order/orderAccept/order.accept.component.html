@@ -1,0 +1,20 @@
+<div>
+  <h2>Items:</h2>
+  <table border="1px" width="70%">
+    <th>№</th>
+    <th>Name</th>
+    <th>Price</th>
+    <tr *ngFor="let p of products ; let i = index">
+      <td>{{i+1}}</td>
+      <td>{{p.name}}</td>
+      <td>{{p.price}}</td>
+      <td>
+        <button (click)="deleteProduct(p)">delete</button>
+      </td>
+    </tr>
+  </table>
+  <h2>Total : {{total}}</h2>
+</div>
+<div>
+  <new-user></new-user>
+</div>
