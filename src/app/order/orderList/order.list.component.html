@@ -1,7 +1,19 @@
 <div>
-  <table>
-    <tr *ngFor="let order of orders">
-      <td>{{order?.id}}</td>
-    </tr>
-  </table>
+    <div *ngFor="let order of orders">
+      <legend>{{order?.date}}</legend>
+      <table class="table-bordered">
+        <th>Item name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Sum</th>
+        <tr *ngFor="let item of order.items">
+          <td>{{item.name}}</td>
+          <td>{{item.quantity}}</td>
+          <td>{{item.price}}</td>
+          <td>{{item.quantity*item.price}}</td>
+        </tr>
+      </table>
+      <H2>TOTAL: {{getSum(order)}}</H2>
+     </div>
+
 </div>

@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {OrderServiceUtil} from "./utils/order/order.service.util";
 import {Router} from "@angular/router";
+import {AuthenticationService} from "./login/authentication.service";
 
 @Component({
   selector: 'my-app',
@@ -9,7 +10,7 @@ import {Router} from "@angular/router";
 })
 export class AppComponent{
 
-    constructor(public service: OrderServiceUtil,private router: Router) {
+    constructor(public service: OrderServiceUtil,  public auth: AuthenticationService, router: Router) {
     }
 
 }

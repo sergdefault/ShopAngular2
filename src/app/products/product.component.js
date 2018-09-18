@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var categories_sercice_1 = require("../categories/categories.sercice");
+var categories_sercice_1 = require("../menus/categories.sercice");
 var ProductListComponent = (function () {
     function ProductListComponent(route, categoriesService) {
         this.route = route;

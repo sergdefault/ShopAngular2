@@ -14,7 +14,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var authentication_service_1 = require("../login/authentication.service");
+var authentication_service_1 = require("../../login/authentication.service");
 var HeaderComponent = (function () {
     function HeaderComponent(route, service) {
         this.route = route;
@@ -31,7 +31,7 @@ var HeaderComponent = (function () {
 HeaderComponent = __decorate([
     core_1.Component({
         selector: 'header-component',
-        templateUrl: './header.component.html',
+        templateUrl: './smart.header.html',
     }),
     __metadata("design:paramtypes", [router_1.ActivatedRoute, authentication_service_1.AuthenticationService])
 ], HeaderComponent);

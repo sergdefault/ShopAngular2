@@ -11,7 +11,7 @@ import {AuthenticationService} from "../login/authentication.service";
 
 @Injectable()
 export class CategoriesService {
-  private baseUrl: string = 'http://212.68.160.118:8080';
+  private baseUrl: string = 'http://localhost:8080';
 
   constructor(private http: Http) {
   }

@@ -5,6 +5,7 @@ export interface IProduct {
   product_id: number;
   name: string;
   description: string;
+  quantity:number;
   price: number;
   shortDescription: string;
 }

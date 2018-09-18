@@ -10,7 +10,7 @@ import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class AuthenticationService {
-  private authUrl = 'http://212.68.160.118:8080/auth';
+  private authUrl = 'http://localhost:8080/auth';
   private headers = new Headers({'Content-Type': 'application/json'});
 
   constructor(private http: Http) {
@@ -21,9 +21,10 @@ export class AuthenticationService {
       .map((response: Response) => {
         // login successful if there's a jwt token in the response
         let token = response.json() && response.json().token;
+
         if (token) {
           // store username and jwt token in local storage to keep user logged in between page refreshes
-          localStorage.setItem('currentUser', JSON.stringify({ username: username, token: token }));
+          localStorage.setItem('currentUser', JSON.stringify({ username: username, role: response.json().role, token: token }));
 
           // return true to indicate successful login
           return true;
@@ -48,4 +49,6 @@ export class AuthenticationService {
     var token: String = this.getToken();
     return token && token.length > 0;
   }
+
+
 }

@@ -9,9 +9,9 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li> <a *ngIf="!service.isLoggedIn()" routerLink="/login">Login</a></li>
-        <li> <a *ngIf="service.isLoggedIn()" (click)="logout()">Logout</a></li>
-        <li> <a *ngIf="service.isLoggedIn()" routerLink="/cabinet">Cabinet</a></li>
+        <li> <a *ngIf="!auth.isLoggedIn()" routerLink="/login">Login</a></li>
+        <li> <a *ngIf="auth.isLoggedIn()" (click)="logout()">Logout</a></li>
+        <li> <a *ngIf="auth.isLoggedIn()" routerLink="/cabinet">Cabinet</a></li>
       </ul>
     </div>
   </div>

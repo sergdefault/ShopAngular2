@@ -7,12 +7,12 @@ import { ProductService } from './products/productList/product.service';
 import { ProductListComponent } from './products/productList/product.component';
 import {ProductDetailComponent} from './products/productDetail/product.detail.component';
 import {AppComponent} from './app.component';
-import {CategoryListComponent} from './categories/menu/categories.component';
+import {CategoryListComponent} from './menus/menu/categories.component';
 import {BasketBtn} from './basket/btn/basket.btn.component';
 import {BasketComponent} from './basket/container/basket.tcomponent';
 import {OrderServiceUtil} from './utils/order/order.service.util';
 import {LoginComponent} from "./login/login.component";
-import {HeaderComponent} from "./header/header.component";
+import {HeaderComponent} from "./headers/desctop/header.component";
 import {AuthenticationService} from "./login/authentication.service";
 import {UserCabinetComponent} from "./cabinet/user.cabinet.component";
 import {CanActivateAuthGuard} from "./login/can-activate.authguard";
@@ -21,11 +21,11 @@ import {OrderService} from "./order/order.service";
 import {OrderListComponent} from "./order/orderList/order.list.component";
 import {OrderAcceptComponent} from "./order/orderAccept/order.accept.component";
 import {CreateNewUserComponent} from "./login/newuser/new.user.component";
-import {SmartMenuComponent} from "./categories/smartPhoneMenu/smart.menu.component";
-
+import {AdminMenuComponent} from "./menus/menu/admin.menu.component";
 
 const appRoutes: Routes = [
-  { path: 'category/:id', component: ProductListComponent },
+  { path: 'categories', component: CategoryListComponent },
+  { path: 'category/:id', component: ProductListComponent},
   { path: 'product/:id',      component: ProductDetailComponent },
   { path: 'login',      component: LoginComponent },
   { path: 'cabinet',      component: UserCabinetComponent, canActivate: [CanActivateAuthGuard]},
@@ -41,12 +41,12 @@ const appRoutes: Routes = [
     BasketBtn,
     BasketComponent,
     LoginComponent,
-    HeaderComponent,
     UserCabinetComponent,
     OrderListComponent,
     OrderAcceptComponent,
     CreateNewUserComponent,
-    SmartMenuComponent
+    HeaderComponent,
+    AdminMenuComponent
   ],
   imports: [
     RouterModule.forRoot(
