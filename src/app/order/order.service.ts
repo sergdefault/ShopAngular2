@@ -25,6 +25,9 @@ export class OrderService {
   }
 
   save(order: Order){
+    if(order.userId==null){
+      console.log("Error: empty user");
+    }
     this.http.post(`${this.baseUrl}/save`, JSON.stringify(order), {headers: this.getHeaders()}).subscribe();
   }
 

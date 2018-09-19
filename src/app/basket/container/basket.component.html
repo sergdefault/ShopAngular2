@@ -1,13 +1,13 @@
 <div class="thumbnail">
     <div class="thumbnail" *ngFor="let item of order.items">
-        <p>{{item.name}}</p>
+        <p><a [routerLink]="['/product', item.product_id]">{{item.name}}</a></p>
         <span>{{item.quantity}} шт.</span>
         <span> Сумма {{item.quantity*item.price}}</span>
-        <button class="f-right" (click)="deleteItem(item)">X</button>
+        <button class="f-right btn-danger" (click)="deleteItem(item)">X</button>
     </div>
 
   <h2>Total : {{service.order.totalPrice}}</h2>
-  <button  routerLink="/order">Go to order</button>
+  <button class="btn btn-success"  routerLink="/order">Оформить заказ</button>
   <span>Total price:{{service.total}}</span>
 </div>
 

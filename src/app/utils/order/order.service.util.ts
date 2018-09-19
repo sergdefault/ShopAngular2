@@ -7,7 +7,6 @@ import {User} from "../../cabinet/User";
 @Injectable()
 export class OrderServiceUtil {
   order = new Order();
-  user:User;
 
   addProduct(product: IProduct): void {
     if (this.order.items.length == 0) {
@@ -43,6 +42,4 @@ export class OrderServiceUtil {
     this.order.items.forEach(i => this.order.totalPrice += i.price * i.quantity);
   }
 
-  //delete
-  deleteProduct(p:IProduct){}
 }

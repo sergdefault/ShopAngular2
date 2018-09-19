@@ -2,15 +2,18 @@
   <h2>Items:</h2>
   <table border="1px" width="70%">
     <th>№</th>
-    <th>Name</th>
-    <th>Price</th>
+    <th>Название</th>
+    <th>Количество</th>
+    <th>Цена</th>
+    <th>сумма</th>
     <tr *ngFor="let item of order.items ; let i = index">
-      <td>{{item.name}}</td>
+      <td>{{i+1}}</td>
+      <td><a [routerLink]="['/product', item.product_id]">{{item.name}}</a></td>
       <td>{{item.quantity}}</td>
       <td>{{item.price}}</td>
       <td>{{item.quantity*item.price}}</td>
       <td>
-        <button (click)="deleteProduct(p)">delete</button>
+        <button class ="nav-btn btn-danger"(click)="deleteItem(item)">Х</button>
       </td>
     </tr>
   </table>

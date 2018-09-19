@@ -1,6 +1,6 @@
 <div>
     <div *ngFor="let order of orders">
-      <legend>{{order?.date}}</legend>
+      <legend>{{order?.date | date:'dd/MM/yyyy'}}</legend>
       <table class="table-bordered">
         <th>Item name</th>
         <th>Quantity</th>
