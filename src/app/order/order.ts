@@ -10,6 +10,7 @@ export class Order {
   items: OrderItem[]=[];
   date: Date;
   totalPrice:number;
+  description:string;
   constructor(){
   }
 }

@@ -18,7 +18,11 @@
     </tr>
   </table>
   <h2>Total : {{total}}</h2>
-  <button class="nav-btn" (click)="saveOrder()"><h1>save</h1></button>
+  <div>
+    <p>Коментарий к заказу:</p>
+    <textarea cols="80" rows="5" [(ngModel)]="order.description"></textarea>
+  </div>
+  <button class="btn btn-success" (click)="saveOrder()">Подтвердить заказ</button>
 </div>
 <div>
   <new-user></new-user>
