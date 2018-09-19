@@ -1,6 +1,6 @@
-<div class="col-sm-6 col-md-4" *ngFor="let product of products">
-        <div class="thumbnail">
-          <h3 style="text-align: center">{{product.name}}</h3>
+<div class="col-sm-6 col-md-4" *ngFor="let product of products; let i = index">
+        <div class="thumbnail prod-container">
+          <h2 style="text-align: center">{{product.name}}</h2>
           <p class="caption">{{product.shortDescription}}</p>
           <div> <a [routerLink]="['/product', product.product_id]">detail info</a></div>
           <table width="100%">
@@ -10,8 +10,8 @@
             <td align="right"><basket-btn [product]="product"></basket-btn></td>
           </tr>
           </table>
-        </div>
-      </div>
+       </div>
+</div>
 
 
 

@@ -1,15 +1,12 @@
 <div class="thumbnail">
-  <table class="table">
-    <tr *ngFor="let product of p">
-      <td>
-        <span>{{product.name}}</span>
-      </td>
-      <td>
-        <button (click)="deleteProduct(product)">delete</button>
-      </td>
-    </tr>
-  </table>
-  <button (click)="save()">save</button>
+    <div class="thumbnail" *ngFor="let item of order.items">
+        <p>{{item.name}}</p>
+        <span>{{item.quantity}} шт.</span>
+        <span> Сумма {{item.quantity*item.price}}</span>
+        <button class="f-right" (click)="deleteItem(item)">X</button>
+    </div>
+
+  <h2>Total : {{service.order.totalPrice}}</h2>
   <button  routerLink="/order">Go to order</button>
   <span>Total price:{{service.total}}</span>
 </div>

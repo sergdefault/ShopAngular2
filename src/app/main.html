@@ -44,14 +44,10 @@
 </div>
 
 
-<div class="row">
+<div>
   <div class="col-md-3 thumbnail left-menu">
-      <!--<div >-->
-        <!--<admin-menu *ngIf="auth.isAdmin()" class="visible-md visible-lg"></admin-menu>-->
-      <!--</div>-->
-
       <app-categories class="visible-md visible-lg"></app-categories>
-      <app-basket class="visible-md visible-lg" *ngIf="service.total"></app-basket>
+      <app-basket class="visible-md visible-lg"></app-basket>
   </div>
   <div class="col-md-9">
     <router-outlet></router-outlet>

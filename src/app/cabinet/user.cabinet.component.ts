@@ -16,5 +16,5 @@ export class UserCabinetComponent implements OnInit{
 
   ngOnInit(): void {
     this.userService.getUser().subscribe(u => this.user = u);
-  }
+    }
 }

@@ -1,10 +1,14 @@
 import {IProduct} from "../products/product";
+import {OrderItem} from "../products/order.item";
 /**
  * Created by SerhiiTsymbaliuk on 12/8/17.
  */
 
-export interface Order {
-  id: number;
+export class Order {
   userId: number;
-  items: IProduct[];
+  items: OrderItem[]=[];
+  date: Date;
+  totalPrice:number;
+  constructor(){
+  }
 }
